@@ -1,0 +1,36 @@
+GUIA DE COMANDOS PARA EL MANEJO DE PROYECTOS EN GIT
+
+1️⃣ Check en local
+Estando en tu rama, asegurate de que todo funcione bien:
+▶️ npm run dev
+Si anda, seguimos.
+
+2️⃣ Sincronizar Dev
+Pasate a dev y traé lo último que subieron tus compañeros:
+▶️ git checkout dev
+▶️ git pull origin dev
+
+3️⃣ ¿Qué pasó en el Pull?
+
+🔹 Opción A: "Already up to date" (No hay cambios nuevos)
+Si no bajó nada, mergeás directo:
+▶️ git merge mi-rama
+▶️ git push origin dev
+
+🔹 Opción B: Bajaron cambios (¡Alerta de conflictos!)
+Si hay cosas nuevas, nunca mergees directo en dev. Hacelo así:
+
+Volvé a tu rama: git checkout mi-rama
+
+Traé lo nuevo de dev a tu rama: git merge dev
+
+Si hay conflictos: los resolvés en el editor, guardás, y hacés git add . + git commit.
+
+Probá de nuevo: Corré el proyecto (npm run dev) para ver que el código de tus compañeros no rompió lo tuyo.
+
+Si todo está ok, terminalo en dev:
+▶️ git checkout dev
+▶️ git merge mi-rama
+▶️ git push origin dev
+
+⚠️ Regla de oro: ¡Cualquier lío que surja se arregla siempre en tu rama, nunca en dev!
