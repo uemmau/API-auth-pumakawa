@@ -1,31 +1,29 @@
 {
-  "name": "api-auth-pumakawa",
+  "type": "module",
+  "name": "apiauthpumakawa",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uemmau/API-auth-pumakawa.git"
+    "url": "git+https://github.com/Biurra/APIAuthPumakawa.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/uemmau/API-auth-pumakawa/issues"
+    "url": "https://github.com/Biurra/APIAuthPumakawa/issues"
   },
-  "homepage": "https://github.com/uemmau/API-auth-pumakawa#readme",
-  "description": "",
+  "homepage": "https://github.com/Biurra/APIAuthPumakawa#readme",
   "dependencies": {
+    "@supabase/supabase-js": "^2.110.0",
     "bcrypt": "^6.0.0",
-    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "express-validator": "^7.3.2",
-    "helmet": "^8.2.0",
-    "jsonwebtoken": "^9.0.3",
-    "morgan": "^1.11.0",
-    "pg": "^8.22.0"
+    "jsonwebtoken": "^9.0.3"
   }
 }
