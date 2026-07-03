@@ -41,3 +41,4 @@ JWT_SECRET=[generated_key]
 ```
 
 Afterwards, erase the keyGen log line.
+
