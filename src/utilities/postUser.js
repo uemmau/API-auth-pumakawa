@@ -1,7 +1,7 @@
 import { supabase } from './supabase.js';
 import * as utils from './uIndex.js';
 
-export async function postUser(user, pwd) {
+export async function postUser(user, pwd, email, nombre, tokenValidacion) {
     const givenId = utils.idGen();
     const { data, error } = await supabase
         .from('users')
@@ -9,7 +9,11 @@ export async function postUser(user, pwd) {
             {
                 id: givenId,
                 username: user,
-                password: pwd
+                password: pwd,
+                email: email,
+                nombre: nombre,
+                validado: false,
+                tokenValidacion: tokenValidacion
             }
         ])
 
